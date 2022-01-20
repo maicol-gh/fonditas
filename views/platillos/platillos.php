@@ -27,7 +27,7 @@
                   	<select name="id_fonda" class="form-control" id="id_fonda" required>
                   		<option value="">Seleccione una opción</option>
                   		<?php foreach ($fondas as $column => $value): ?>
-                  			<option value="<?= $value['id_fonda'] ?>" selected><?= $value['id_fonda'].' - '.$value['calle'] ?></option>
+                  			<option value="<?= $value['id_fonda'] ?>" selected><?= $value['id_fonda'].' - '.$value['nombre_fonda'] ?></option>
                   		<?php endforeach; ?>
 										</select>
                   </div>
@@ -50,7 +50,7 @@
                   	<input type="text" name="costo" class="form-control" id="costo" placeholder="Costo" required onkeypress="return validaNumero(event);">
                   </div>
                 </div>
-                <input type="text" name="id_platillo" id="id_platillo">
+                <input type="hidden" name="id_platillo" id="id_platillo">
               </div>
               <div class="modal-footer justify-content-right">
                   <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i>Guardar</button>

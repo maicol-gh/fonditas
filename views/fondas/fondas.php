@@ -21,6 +21,13 @@
           </div>
           <form method="POST" id="fondaForm">
               <div class="modal-body">
+                <div class="form-group row">
+                  <label class="col-3" for="nombre_fonda">Nombre de la fonda</label>
+                  <div class="col-9">
+                    <input type="text" name="nombre_fonda" class="form-control" id="nombre_fonda" placeholder="Nombre de la fonda" required>
+                  </div>
+                  
+                </div>
               	<div class="form-group row">
                   <label class="col-1" for="calle">Calle</label>
                   <div class="col-3">
@@ -66,7 +73,7 @@
                   	<input type="text" name="pais" class="form-control" id="pais" placeholder="Pais" required readonly>
                   </div>
                 </div>
-                <input type="text" name="id_fonda" id="id_fonda">
+                <input type="hidden" name="id_fonda" id="id_fonda">
               </div>
               <div class="modal-footer justify-content-right">
                   <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i>Guardar</button>
@@ -102,9 +109,10 @@
               <thead class="thead-dark">
               <tr>
                 <th class="text-primary" scope="col">#</th>
+                <th class="text-primary" scope="col">Nombre</th>
                 <th class="text-primary" scope="col">Calle</th>
                 <th class="text-primary" scope="col">Exterior</th>
-                <th class="text-primary" scope="col">Interior</th>
+                <!--<th class="text-primary" scope="col">Interior</th>-->
                 <th class="text-primary" scope="col">CP</th>
                 <th class="text-primary" scope="col">Colonia</th>
                 <th class="text-primary" scope="col">Delegacion</th>
@@ -118,9 +126,10 @@
                 <?php foreach ($fondas as $column =>$value): ?>
                 <tr>
                   <td class="text-center"><?= $value['id_fonda'] ?></td>
+                  <td class="text-center"><?= $value['nombre_fonda'] ?></td>
                   <td class="text-center"><?= $value['calle'] ?></td>
                   <td class="text-center"><?= $value['exterior'] ?></td>
-                  <td class="text-center"><?= $value['interior'] ?></td>
+                  <!--<td class="text-center"><?= $value['interior'] ?></td>-->
                   <td class="text-center"><?= $value['cp'] ?></td>
                   <td class="text-center"><?= $value['colonia'] ?></td>
                   <td class="text-center"><?= $value['delegacion'] ?></td>

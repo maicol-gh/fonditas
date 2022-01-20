@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS `fondas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fondas` (
   `id_fonda` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_fonda` varchar(255) NOT NULL,
   `calle` varchar(255) NOT NULL,
   `interior` varchar(50) NOT NULL,
   `exterior` varchar(50) NOT NULL,
@@ -35,7 +36,7 @@ CREATE TABLE `fondas` (
   `pais` varchar(255) NOT NULL,
   PRIMARY KEY (`id_fonda`),
   UNIQUE KEY `id_fonda_UNIQUE` (`id_fonda`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +45,7 @@ CREATE TABLE `fondas` (
 
 LOCK TABLES `fondas` WRITE;
 /*!40000 ALTER TABLE `fondas` DISABLE KEYS */;
-INSERT INTO `fondas` VALUES (1,'SIETE','1','269','57800','ESPERANZA','NEZAHUALCOYOTL','NEZAHUALCOYOTL','ESTADO DE MEXICO','MEXICO'),(7,'Siete #','3242343','269','57800','sol','sdfgh','NezahualcÃ³yotl','MÃ‰XICO','MÃ©xico'),(8,'Siete #','d','269','57800','asadffdf','fdgdfag','NezahualcÃ³yotl','MÃ‰XICO','MÃ©xico'),(10,'Siete #','4849864','269','57800','TOAST','TOAST','NezahualcÃ³yotl','MÃ‰XICO','MÃ©xico'),(11,'Siete #','12345','269','57800','ESPERANZA','TOAST','NezahualcÃ³yotl','MÃ‰XICO','MÃ©xico'),(12,'SIETE','21','269','54875','P1UIrqOTEmPM','RVND8qC','LwZ1vK','xzvrcD7S5Ixob','MÃ©xico'),(16,'Siete #','1','269','57800','KJTja','ynjFwXmp1UYqAtV','rJV8l36ipGuF','JLBEHe9cst','MÃ©xico'),(17,'SEVEN ELEVEN','2','269','57800','rMM8wWn','Sa15SPLuCrF2D','AZAMG','h2BmH4yHzF','MÃ©xico');
+INSERT INTO `fondas` VALUES (1,'FONDITA','SIETE','1','269','57800','ESPERANZA','NEZAHUALCOYOTL','NEZAHUALCOYOTL','ESTADO DE MEXICO','MEXICO'),(10,'FONDA 10','Siete #','4849864','269','57800','TOAST','TOAST','NezahualcÃ³yotl','MÃ‰XICO','MÃ©xico'),(11,'NOMBRE FONDA','Siete #','12345','269','57800','ESPERANZA','TOAST','NezahualcÃ³yotl','MÃ‰XICO','MÃ©xico'),(12,'FONDITA','SIETE','21','269','54875','P1UIrqOTEmPM','RVND8qC','LwZ1vK','xzvrcD7S5Ixob','MÃ©xico'),(16,'FONDITAAAAA','Siete #','1','269','57800','KJTja','ynjFwXmp1UYqAtV','rJV8l36ipGuF','JLBEHe9cst','MÃ©xico'),(17,'FONDA','SEVEN ELEVEN','2','269','57800','rMM8wWn','Sa15SPLuCrF2D','AZAMG','h2BmH4yHzF','MÃ©xico'),(19,'NUEVA FONDA CON API','API','456','123','06100','HipÃ³dromo','CuauhtÃ©moc','Ciudad de MÃ©xico','Ciudad de MÃ©xico','MÃ©xico');
 /*!40000 ALTER TABLE `fondas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,7 +76,7 @@ CREATE TABLE `platillos` (
 
 LOCK TABLES `platillos` WRITE;
 /*!40000 ALTER TABLE `platillos` DISABLE KEYS */;
-INSERT INTO `platillos` VALUES (1,17,'PLATILLO 1','SABROSO','SAL Y LIMON',5000.500),(3,8,'PLATILLO 3','RICO','CREMA ARROZ',850.000);
+INSERT INTO `platillos` VALUES (1,17,'PLATILLO 1','SABROSO','SAL Y LIMON',5000.500);
 /*!40000 ALTER TABLE `platillos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -88,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-20 11:52:31
+-- Dump completed on 2022-01-20 12:52:30

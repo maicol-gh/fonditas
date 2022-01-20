@@ -53,7 +53,7 @@ $('#fondaForm').submit(function(event) {
                 if (data.toString().indexOf("Error:") === -1) {
                     //swal(data,"","success");
                     Swal.fire(data, '', 'success');
-                    //location.reload();
+                    location.reload();
                     //window.location.href ="./index.php?page=fondas&folder=fondas";
                 } else {
                     // swal(data,'','error');
@@ -134,7 +134,7 @@ function countChars(){
 function setColonia(cp){
     $.ajax({
 		type: "GET",
-		url: "https://api.copomex.com/query/info_cp/"+cp+"?type=simplified&token=pruebas",
+		url: "https://api.copomex.com/query/info_cp/"+cp+"?type=simplified&token=5cc030a0-80e8-4272-8e06-a9a0eb51a898",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 	 	success: function (data) {
@@ -166,7 +166,7 @@ function setColonia2(cp,col){
 	console.log(col);
     $.ajax({
 		type: "GET",
-		url: "https://api.copomex.com/query/info_cp/"+cp+"?type=simplified&token=pruebas",
+		url: "https://api.copomex.com/query/info_cp/"+cp+"?type=simplified&token=5cc030a0-80e8-4272-8e06-a9a0eb51a898",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 	 	success: function (data) {
@@ -220,7 +220,7 @@ function deleteFonda(id){
 	            if (data.toString().indexOf("Error:") === -1) {
 	                //swal(data,"","success");
 	                Swal.fire(data, '', 'success');
-	                //location.reload();
+	                location.reload();
 	            } else {
 	                // swal(data,'','error');
 	                // $("#mensajes").html(data);
@@ -239,6 +239,7 @@ function deleteFonda(id){
 }
 
 function limpiaForm(){
+	$('#nombre_fonda').val('');
 	$('#calle').val('');
 	$('#exterior').val('');
 	$('#interior').val('');
@@ -262,6 +263,7 @@ function getFonda(id){
         processData: false,
 	 	success: function (data) {
 	 		var fonda = JSON.parse(data);
+	 		$('#nombre_fonda').val(fonda[0].nombre_fonda);
 	 		$('#calle').val(fonda[0].calle);
 	 		$('#exterior').val(fonda[0].exterior);
 	 		$('#interior').val(fonda[0].interior);

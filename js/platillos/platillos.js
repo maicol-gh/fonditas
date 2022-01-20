@@ -53,7 +53,7 @@ $('#platilloForm').submit(function(event) {
                 if (data.toString().indexOf("Error:") === -1) {
                     //swal(data,"","success");
                     Swal.fire(data, '', 'success');
-                    //location.reload();
+                    location.reload();
                     //window.location.href ="./index.php?page=fondas&folder=fondas";
                 } else {
                     // swal(data,'','error');
@@ -103,7 +103,7 @@ function deletePlatillo(id){
 	            if (data.toString().indexOf("Error:") === -1) {
 	                //swal(data,"","success");
 	                Swal.fire(data, '', 'success');
-	                //location.reload();
+	                location.reload();
 	            } else {
 	                // swal(data,'','error');
 	                // $("#mensajes").html(data);

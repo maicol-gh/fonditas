@@ -25,8 +25,8 @@
 
 		//Crea una nueva fonda
 		public function newFonda($data){
-			$query="insert INTO fondas (calle,interior,exterior,cp,colonia,delegacion,ciudad,estado,pais) 
-						VALUES ('".$data['calle']."','".$data['interior']."','".$data['exterior']."','".$data['cp']."','".$data['colonia']."','".$data['delegacion']."','".$data['ciudad']."','".$data['estado']."','".$data['pais']."')";
+			$query="insert INTO fondas (nombre_fonda,calle,interior,exterior,cp,colonia,delegacion,ciudad,estado,pais) 
+						VALUES ('".$data['nombre_fonda']."','".$data['calle']."','".$data['interior']."','".$data['exterior']."','".$data['cp']."','".$data['colonia']."','".$data['delegacion']."','".$data['ciudad']."','".$data['estado']."','".$data['pais']."')";
 			$result =mysqli_query($this->link,$query);
 			if(mysqli_affected_rows($this->link)>0){
 				return true;
@@ -56,6 +56,7 @@
 			if(!empty($data['id_fonda'])){
 				$query  ="update fondas 
 						SET 
+							nombre_fonda = '".$data['nombre_fonda']."',
 							calle = '".$data['calle']."',
 							interior = '".$data['interior']."',
 							exterior = '".$data['exterior']."',

@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS `fondas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fondas` (
   `id_fonda` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_fonda` varchar(255) NOT NULL,
   `calle` varchar(255) NOT NULL,
   `interior` varchar(50) NOT NULL,
   `exterior` varchar(50) NOT NULL,
@@ -68,4 +69,4 @@ CREATE TABLE `platillos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-20 11:53:05
+-- Dump completed on 2022-01-20 12:52:55

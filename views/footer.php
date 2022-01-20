@@ -2,7 +2,7 @@
 </div>
 <footer class="container-fluid">
     <div class="float-right d-none d-sm-block">
-      Codigo <a href="http://codigoweblibre.blogspot.com">codigoweblibre.blogspot.com</a>
+      <a href="https://github.com/maicol-gh/fonditas">Codigo </a>
     </div>
     <strong>Desarrollado por Miguel Osorio</strong>
 </footer>
